@@ -1,0 +1,100 @@
+<apex:page sidebar="false" showHeader="false" id="p1" lightningStylesheets="true">
+    <apex:stylesheet value="{!$Resource.StyleCss}"></apex:stylesheet>
+   
+    <apex:form id="f1">
+        
+       
+        <br/>
+        <div align="center">
+            <apex:image value="{!$Resource.flipkart}"/>
+        </div>
+        
+       <table align="center">
+         
+           
+           <tr>
+           <td colspan="2">
+               <apex:outputText value="Employee Data" styleClass="maintitle"></apex:outputText>
+               </td>
+           </tr>
+           
+               <tr>
+           <td>
+               <apex:outputText value="First Name" styleClass="label1"></apex:outputText>
+               </td>
+               <td>
+                   <apex:inputText />
+               </td>
+            </tr>
+           
+           
+           
+           <tr>
+           <td>
+               <apex:outputText value="Last Name" styleClass="label1"></apex:outputText>
+               </td>
+               <td>
+                   <apex:inputText />
+               </td>
+            </tr>
+           <tr>
+           <td>
+               <apex:outputText value="User Name" styleClass="label2"></apex:outputText>
+               </td>
+               <td>
+               <apex:inputText />
+               </td>
+            </tr>
+           <tr>
+           <td>
+               <apex:outputText value="City" styleClass="label2"></apex:outputText>
+               </td>
+               <td>
+               <apex:inputText />
+               </td>
+            </tr>
+           <tr>
+           <td>
+               <apex:outputText value="Salary" styleClass="label2"></apex:outputText>
+               </td>
+               <td>
+               <apex:inputText id="sal"/>
+               </td>
+            </tr>
+           <tr>
+           <td>
+               <apex:outputText value="Tax(%)" styleClass="label2"></apex:outputText>
+               </td>
+               <td>
+               <apex:inputText id="tx"/>
+               </td>
+            </tr>
+           <tr>
+           <td>
+               <apex:outputText value="Net Salary" styleClass="label2"></apex:outputText>
+               </td>
+               <td>
+               <apex:inputText id="nsal" />
+                   <apex:commandButton value="Calculate" onclick="calculateNetSalary();" />
+               </td>
+            </tr>
+           <tr >
+           <td  colspan="2" align="center" >
+               <apex:commandButton value="SUBMIT" />
+               </td>
+           </tr>
+              
+           
+        </table>
+    </apex:form>
+    <script>
+    window.onbeforeunload=function(){
+        return "Leave now?";
+        }
+      function calculateNetSalary(){
+          var sal=document.getElementById('p1:f1:sal').value;
+          var tax=document.getElementById('p1:f1:tx').value;
+          document.getElementById('p1:f1:nsal').value=sal-(sal*tax/100);          
+      }
+    </script>          
+</apex:page>

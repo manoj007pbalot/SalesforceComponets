@@ -1,0 +1,36 @@
+<apex:page controller="AccountDetail">
+    <apex:outputText style="font-style:italic">
+ <apex:form >
+        <apex:pageBlock title="10 Records of Accounts">
+                <table border="2px">
+                   <!-- <tr>
+                        <th scope="row">Id</th>
+                        <th scope="row">Name</th>
+                        <th scope="row">Phone</th>
+                    </tr>-->
+            <apex:repeat value="{!acts}" var="a" >
+                
+                    <tr>
+                      
+                        <th scope="row">Id</th>                     
+                        <td >{! a.Id}</td>
+                       
+                    </tr>
+                
+                    <tr>
+                        <th scope="row">Name</th>
+                        <td >{! a.Name}</td>
+                        
+                   </tr> 
+                   <tr>
+                       <th scope="row">Phone</th>
+                        <td >{! a.phone}</td>
+                       
+                    </tr>
+            </apex:repeat>
+                    </table>
+        </apex:pageBlock>
+    </apex:form>
+        </apex:outputText>
+
+</apex:page>

@@ -1,0 +1,10 @@
+<apex:page controller="dynamicTextColor_Controller">
+    <apex:pageblock title="My Opportunities">
+        <apex:pageBlockTable value="{!Opps}" var="o">
+            <apex:column value="{!o.Name}" />
+            <apex:column headerValue="Amount">
+                <apex:outputText value="{!o.Amount}" style="color:{!IF(o.Amount < 100000, 'red', 'black')};"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageblock>
+</apex:page>

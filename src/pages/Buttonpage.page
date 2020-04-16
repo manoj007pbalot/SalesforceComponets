@@ -1,0 +1,29 @@
+<apex:page standardController="Account" showChat="false" sidebar="false" extensions="RerenderPageMessages" lightningStylesheets="true" showHeader="false" showQuickActionVfHeader="false" >
+
+    <apex:form >
+      
+          <apex:pageBlock title="Enter Account Details" id="frm" >
+
+           <apex:pageBlockSection columns="3" title="My Content Section" collapsible="false" >
+
+           <apex:inputField value="{!Account.Name}"  id="p"/>                  
+
+                <apex:inputField value="{!Account.AccountNumber}"/>                 
+
+                <apex:inputField value="{!Account.Fax}"/>
+
+                <apex:inputField value="{!Account.Industry}"/>
+
+                <apex:inputField value="{!Account.phone}"/>
+              </apex:pageBlockSection>
+              <apex:commandButton value="save" action="{!save}"  reRender="buttons" />
+             <apex:actionStatus startText="(Saving...)" stopText=" " onstop="Window.close();" id="closer"/>
+            
+             </apex:pageBlock>
+              <apex:outputPanel id="buttons">
+                 <apex:pageMessages id="errorMessage" />
+              </apex:outputPanel>
+
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,15 @@
+<apex:page standardStylesheets="false" >
+  <apex:form >
+  <apex:pageBlock > 
+      <apex:pageBlockSection columns="4" collapsible="false" >
+      Name <apex:inputtext /> 
+      Age <apex:inputtext size=""/>
+          Address <apex:inputtext /> 
+          Collage <apex:inputtext /> 
+          Subject <apex:inputtext /> 
+          Pin <apex:inputtext /> 
+      <apex:commandButton value="Click"/>  
+       </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

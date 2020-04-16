@@ -1,0 +1,11 @@
+<apex:page controller="Screen2" >
+ <apex:form >
+ <apex:pageBlock >
+ <apex:pageblockSection >
+     <apex:outputField value="{!account.name}" style="font-weight:bold;"/>
+     <apex:inputfield value="{!account.phone}"/>
+ </apex:pageblockSection>
+ <apex:commandButton value="update" action="{!save}"/>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

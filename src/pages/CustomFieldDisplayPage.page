@@ -1,0 +1,12 @@
+<apex:page controller="CustomFieldDisplay" showHeader="false" sidebar="false" lightningStylesheets="true" >
+    <apex:form >
+    <apex:pageblock id="member" title="Position Details">
+            <apex:pageblockTable value="{!pos}" var="p">
+                <apex:column value="{!p.Name}"  />
+                <apex:column headerValue="Min Salary">
+                <apex:outputText value="{!p.Min_Salary__c}" style="font-weight:{!IF(p.Min_Salary__c > 10000, '900', 'normal')};"/>
+            </apex:column>
+            </apex:pageblockTable>          
+        </apex:pageblock>        
+    </apex:form>
+</apex:page>

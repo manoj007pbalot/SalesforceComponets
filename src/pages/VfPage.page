@@ -1,0 +1,79 @@
+<apex:page controller="cls_printpage1" sidebar="false" showHeader="false" lightningStylesheets="true" id="page1">
+ <apex:form >
+ <apex:pageBlock title="My Page Block" >
+     
+<script>
+     function confirmDisbaled(ifchecked, id1 ,id2,id3,id4) {
+
+       document.getElementById(id1).disabled = ifchecked;
+       document.getElementById(id2).disabled = ifchecked;
+       document.getElementById(id3).disabled = ifchecked;
+       document.getElementById(id4).disabled = ifchecked;
+
+
+}
+     </script>
+  
+<table class="list" border="0" cellpadding="0" cellspacing="0">
+   
+    <th class="headerRow">
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" label="Standard" id="gbl" onchange="return confirmDisbaled(this.checked, '{!$Component.data1}','{!$Component.data2}','{!$Component.lcl}','{!$Component.cntry}');"/>
+          
+            <b>LineItem-1</b> 
+        
+        </th>
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" label="LineItem-1" id="lcl" onchange="return confirmDisbaled(this.checked, '{!$Component.data1}','{!$Component.data2}','{!$Component.cntry}','{!$Component.gbl}');"/> 
+            <b>LineItem-2</b> 
+        </th>
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" label="LineItem-2" id="cntry" onchange="return confirmDisbaled(this.checked, '{!$Component.data1}','{!$Component.data2}','{!$Component.lcl}','{!$Component.gbl}');"/>
+          
+           <b>LineItem-3</b> 
+        
+        </th>
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" label="LineItem-3" id="data1" onchange="return confirmDisbaled(this.checked, '{!$Component.data2}','{!$Component.cntry}','{!$Component.lcl}','{!$Component.gbl}');"/>
+          
+           <b>LineItem-4</b> 
+        
+        </th>
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" label="LineItem-5" id="data2" onchange="return confirmDisbaled(this.checked, '{!$Component.data1}','{!$Component.cntry}''{!$Component.lcl}','{!$Component.gbl}');"/>
+          
+           <b>LineItem-5</b> 
+        
+        </th>
+   
+    <apex:repeat value="{!rowWrappers}" var="row">
+ 
+       <tr>
+         <apex:repeat value="{!row.labels}" var="label">          
+           <td>
+            <b>{!label}</b>
+           </td>
+         </apex:repeat>
+         
+         <apex:repeat value="{!row.values}" var="value1">
+         
+           <td>
+             {!value1}
+           </td>
+         </apex:repeat>
+       </tr>
+    </apex:repeat>
+    
+    </table>
+     <apex:pageBlockButtons location="bottom">
+         <apex:commandButton value="Save Record" action="!save" />
+
+     </apex:pageBlockButtons>
+   
+    </apex:pageBlock>
+      </apex:form>
+</apex:page>

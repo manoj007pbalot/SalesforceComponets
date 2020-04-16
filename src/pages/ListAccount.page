@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetVar="acts">
+<apex:form >
+<apex:pageBlock title="List of Account">
+<apex:pageblockTable value="{!acts}" var="a">
+<apex:column value="{!a.Name}"/>
+<apex:column value="{!a.Id}"/>
+<apex:column value="{!a.Type}"/>
+<apex:column value="{!a.Industry}"/>
+<apex:column value="{!a.Fax}"/>
+<apex:column headerValue="checkbox">
+            
+        </apex:column>
+</apex:pageblockTable>
+
+
+
+</apex:pageBlock>
+ </apex:form> 
+</apex:page>

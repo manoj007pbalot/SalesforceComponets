@@ -1,0 +1,23 @@
+<apex:page standardController="Opportunity" showHeader="false" sidebar="false"> 
+<apex:form > 
+<script> 
+function setFocusOnLoad() { 
+document.getElementById('{!$Component.pg.pg1.pg3.vx1}').focus(); 
+} 
+onload=setFocusOnLoad; 
+</script> 
+<apex:pageblock id="pg"> 
+<apex:pageBlockSection title="Opportunity Information Input" columns="1" id="pg1"> 
+<apex:pageBlockSectionItem id="pg2" > 
+<apex:inputfield value="{!Opportunity.StageName}"/> 
+<apex:inputfield value="{!Opportunity.StageName}"/> 
+</apex:pageBlockSectionitem> 
+<apex:pageBlockSectionItem id="pg3" > 
+<apex:inputfield id="vx1" value="{!Opportunity.Name}"/> 
+<apex:inputfield value="{!Opportunity.Name}"/> 
+</apex:pageBlockSectionitem> 
+</apex:pageBlockSection> 
+</apex:pageblock> 
+</apex:form> 
+
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="SaveRecCustomCtrl">   
+  <apex:form >
+    <apex:pageBlock >
+    <apex:outputLabel >Account Name
+      <apex:inputField value="{!a.name}" label="Account Name"/>
+        </apex:outputLabel>
+      <apex:inputfield value="{!a.rating}"/>
+      <apex:commandButton value="Save" action="{!SaveRec}"/>
+            <apex:commandButton value="cancel" action="{!cancel}"/>
+
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

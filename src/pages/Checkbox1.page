@@ -1,0 +1,27 @@
+<apex:page standardController="Opportunity" recordSetVar="opportunities" tabstyle="opportunity" id="page3">
+    <apex:form id="changePrivacyForm">
+        <script>
+            function DisableButton(ifChecked,id1){
+                 document.getElementById(id1).disable=ifChecked;
+                 for(var i=0, n=checkboxes.length;i<n;i++) {
+        //checkboxes[i].checked = source.checked;
+        checkboxes[i].disabled = id1.disabled;
+    }
+                }
+        </script>
+        <apex:pageBlock >
+        <apex:pageMessages />
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!save}"/>
+        </apex:pageBlockButtons>
+
+        <apex:pageBlockTable value="{!opportunities}" var="o" >
+        <apex:column value="{!o.name}"/>
+        <apex:column value="{!o.account.name}"/>
+        <apex:column headerValue="CheckBox">
+            <apex:inputCheckbox />
+        </apex:column>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

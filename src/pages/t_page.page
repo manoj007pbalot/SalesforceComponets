@@ -1,0 +1,33 @@
+<apex:page Controller="t">
+<apex:form >
+     <apex:selectList multiselect="false" size="1" onChange="RenderSection() ;" value="{!SelectedVal}">
+              <apex:selectOptions value="{!myList}"/>
+          </apex:selectList>
+
+  <apex:pageBlock >
+  
+      <apex:actionFunction name="RenderSection" action="{!RenderSec}"/>
+  
+      
+               
+  
+      <apex:pageBlockSection rendered="{!showAccount}">
+          Account Name<apex:inputText />
+          Industry<apex:inputText />
+          Fax<apex:inputText />
+          Phone<apex:inputText />
+      </apex:pageBlockSection>
+    
+   
+      <apex:pageBlockSection rendered="{!showContact}">
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock >
+     <apex:pageBlockSection >
+           Contry<apex:inputText />
+         Address<apex:inputText />
+         Email<apex:inputText />
+      </apex:pageBlockSection>
+   </apex:pageBlock>
+</apex:form>
+</apex:page>

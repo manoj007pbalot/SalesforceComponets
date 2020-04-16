@@ -1,0 +1,21 @@
+<apex:page >
+<apex:form >
+
+<apex:pageBlock title="First Block">
+
+<apex:pageBlockSection title="First Section">
+<apex:pageblocksectionItem >Jaipur</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >Jodhpur</apex:pageblocksectionItem>
+<apex:pageblocksectionItem >Udaipur</apex:pageblocksectionItem>
+
+
+</apex:pageBlockSection>
+
+<apex:commandButton value="save"/>
+</apex:pageBlock>
+</apex:form>
+  
+  
+  
+  
+</apex:page>

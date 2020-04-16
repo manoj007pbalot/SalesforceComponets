@@ -1,0 +1,45 @@
+<apex:page >
+    <apex:form >
+    <script>
+
+    function buttonsEnabled(enabled) {
+        // retrieve all of the buttons or links on the page
+        // with the css class of btn
+        var $buttons = jQuery('.btn');
+        if (enabled === false) {
+            // add the btnDisabled class to give it the look of being disabled
+            // add the disabled attribute to actually disable interactability
+            $buttons.toggleClass('btnDisabled', true).attr('disabled', 'disabled');
+        } else {
+            // remove the css class and the disabled attribute
+            $buttons.toggleClass('btnDisabled', false).attr('disabled', null);
+        } 
+    }
+
+    function doSomeWork() {
+        // first, call the action function to post the form
+        doSomeWorkActionFunction();
+
+        // second, disable the buttons
+        buttonsEnabled(false);
+
+        // third, return false to prevent the click from
+        // posting the form a second time
+        return false;
+    }
+
+</script>
+        <apex:actionStatus id="saveStatus">
+    <apex:facet name="stop">
+        <apex:commandButton value="Save" action="{!save}" status="saveStatus" rerender="saveParentBlock" />
+    </apex:facet>
+    <apex:facet name="start">
+        <apex:commandButton value="Saving..." disabled="true" status="saveStatus"/>
+    </apex:facet>
+</apex:actionStatus>
+
+
+
+    
+</apex:form>
+</apex:page>

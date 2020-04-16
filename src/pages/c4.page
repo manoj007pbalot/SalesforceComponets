@@ -1,0 +1,15 @@
+<apex:page controller="C4" sidebar="false">
+      <apex:form >
+           <apex:pageBlock title="Account Classification on click of a button" id="book1">
+                 <apex:commandButton value="Customer-Channel" action="{!channel}" reRender="book1" />
+                 <apex:commandButton value="Customer-Direct" action="{!direct}" reRender="book1"/>
+
+               <apex:pageBlockTable value="{!acts1}" var="abc">
+                     <apex:column value="{!abc.Name}"/>
+                     <apex:column value="{!abc.Type}"/>
+                     <apex:column value="{!abc.Industry}"/>
+                     <apex:column value="{!abc.Phone}"/>
+               </apex:pageBlockTable>
+              </apex:pageBlock>
+       </apex:form>  
+</apex:page>

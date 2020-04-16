@@ -1,0 +1,41 @@
+<apex:page standardController="Basic_Info__c" extensions="BasicInformationsExtension">
+    <apex:form >
+        <apex:pagemessages ></apex:pagemessages>
+        <apex:pageBlock >            
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!Add_Row}" value="Add Row" rerender="BasicInformation" />
+            </apex:pageBlockButtons>
+            
+
+            <apex:pageBlockSection title="Basic Information" columns="1">
+            <apex:inputField value="{!Basic_Info__c.Name}" required="true"/>
+                <apex:inputField value="{!Basic_Info__c.First_Name__c}" required="true"/>
+                <apex:inputField value="{!Basic_Info__c.Last_Name__c}"/>
+                <apex:inputField value="{!Basic_Info__c.Date_of_Birth__c}"/>
+                
+                <apex:inputField value="{!Basic_Info__c.Email_Id__c}"/>
+                
+                 </apex:pageBlockSection>   
+        </apex:pageBlock>
+
+        <apex:pageBlock >
+           <apex:pageBlockTable id="BasicInformation" value="{!allrecords}" var="BasicInformation">
+                <apex:column value="{!Basic_Info__c.Name}"/>
+                <apex:column value="{!Basic_Info__c.First_Name__c}"/>
+                <apex:column value="{!Basic_Info__c.Last_Name__c}"/>
+                 <apex:column value="{!Basic_Info__c.id}"/>
+                <apex:column value="{!Basic_Info__c.Date_of_Birth__c}"/>
+                
+                <apex:column value="{!Basic_Info__c.Email_Id__c}"/>
+                
+            </apex:pageBlockTable>
+
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!save}" value="Save" />
+            </apex:pageBlockButtons>
+
+
+        </apex:pageBlock>
+
+    </apex:form>
+</apex:page>

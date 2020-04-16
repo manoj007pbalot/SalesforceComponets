@@ -1,0 +1,11 @@
+<apex:page >
+    
+    <apex:sectionHeader title="New Account Detail"/>
+    
+    <apex:form >
+        <apex:outputText value="A timer running to send request to server every 5sec"/>
+        
+        <apex:actionPoller interval="5"/>
+        
+    </apex:form>
+</apex:page>

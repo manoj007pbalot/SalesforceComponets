@@ -1,0 +1,13 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false">
+    <apex:form >
+        <style>
+        .Sample{
+            font-weight:bold;
+        }
+         </style>
+        <apex:outputPanel styleClass="Sample">
+        <apex:outputField value="{!account.name}"  />
+        <apex:outputText value="VAluetext"/>
+            </apex:outputPanel>
+    </apex:form>
+</apex:page>

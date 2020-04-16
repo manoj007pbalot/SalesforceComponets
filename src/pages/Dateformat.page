@@ -1,0 +1,9 @@
+<apex:page controller="myTest">
+
+    <apex:outPutText value="{0,date,short} {1,time,short}">
+        <apex:param value="{!DATEVALUE(tmpDate)}"/>
+        <apex:param value="{!DATETIMEVALUE(tmpDate)}"/>
+    </apex:outPutText>
+
+
+</apex:page>

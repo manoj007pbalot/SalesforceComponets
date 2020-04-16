@@ -1,0 +1,24 @@
+<apex:page standardController="Account">
+
+    <apex:form id="frm">
+        <apex:pageBlock title="My Content" mode="edit" id="pb">
+
+            <apex:pageBlockSection title="My Content Section" columns="2" id="pbs">
+                <apex:inputField value="{!account.name}" id="fst"/>
+                <apex:inputField value="{!account.site}"/>
+                <apex:inputField value="{!account.type}"/>
+                <apex:inputField value="{!account.accountNumber}"/>
+            </apex:pageBlockSection>
+             <apex:pageBlockButtons >
+                <apex:commandButton onclick="msgBox();" value="Save"/>
+            </apex:pageBlockButtons> 
+        </apex:pageBlock>
+
+      <script type="text/javascript">
+        function msgBox()
+        {
+            alert("hi");
+        }
+     </script>
+    </apex:form>
+</apex:page>

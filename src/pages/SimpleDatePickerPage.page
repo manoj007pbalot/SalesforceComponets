@@ -1,0 +1,19 @@
+<apex:page controller="SampleDatePicker">
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                Date 2 : <apex:inputText value="{!datename}" size="10" id="demo" onfocus="DatePicker.pickDate(false, this , false);" /> 
+            </apex:pageBlockSectionItem>            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById("datePicker").addEventListener("click", displayDate);
+        };
+        function displayDate() {
+            document.getElementById("datePicker").style.display = 'block';
+        }    
+    </script>
+</apex:form>
+</apex:page>

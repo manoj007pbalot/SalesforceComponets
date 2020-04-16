@@ -1,0 +1,22 @@
+<apex:page >
+    <html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+   </head>
+  <h2>Vertical (basic) form</h2>
+  <form>
+ <div>
+      <label>Email:</label>
+     <input id="email" placeholder="Enter email" name="email"/>
+    </div>
+    <div>
+      <label>Password:</label>
+        <input id="pwd" placeholder="Enter password" name="pwd"/>
+       </div>
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+</html>
+
+</apex:page>

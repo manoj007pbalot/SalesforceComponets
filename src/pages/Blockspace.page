@@ -1,0 +1,47 @@
+<apex:page standardController="Account" sidebar="false">
+   <apex:form >
+       <script>
+
+window.onload = function() {
+  document.getElementById("Box2").focus();
+};
+</script>  
+      
+        <table cellspacing="5px" cellpadding="5px" align="left">
+                   <tr>
+               <td>
+                   <apex:outputLabel value="Account Name" style="padding-right:20px;" />
+                   <apex:inputText value="{!Account.name}" />
+               </td>
+                   
+               <td >
+                   <apex:outputLabel value="Type of Product" style="padding-right:20px;"  />
+                   <apex:inputText value="{!Account.type}" id="Box2"/>
+               </td>
+                   
+               <td >
+                   <apex:outputLabel value="Fax Machine Name" style="padding-right:25px;"/>
+                   <apex:inputText value="{!Account.fax}"  />
+               </td>
+                   </tr>
+            
+            
+                    <tr>
+                <td>
+                  <apex:outputLabel value="Industry" style="padding-right:23px;padding-left:35px;"/>
+                  <apex:inputText value="{!Account.industry}"/>
+                </td>
+                    
+                <td>
+                   <apex:outputLabel value="Phone" style="padding-right:20px;padding-left:48px;"/>
+                   <apex:inputText value="{!Account.phone}"/>
+                </td>
+                   
+                <td>
+                   <apex:outputLabel value="Rating" style="padding-right:24px;padding-left:70px;"/>
+                   <apex:inputText value="{!Account.Rating}"/>
+                </td>
+                    </tr>
+               </table> 
+          </apex:form> 
+ </apex:page>

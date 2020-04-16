@@ -1,0 +1,6 @@
+<apex:page standardController="Account">
+    <apex:form >
+    <apex:includeScript value="{!$Resource.JSFile}"/>
+         Account Name:<apex:inputField value="{!account.Name}" id="id1" onchange="changeCase('{!$Component.id1}');"/>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page standardController="Account" >
+    <apex:form >
+        
+                <apex:commandButton value="Previous" onComplete="closeWindow();" />
+               <script>
+        
+            function closeWindow(){      
+             alert(1);
+            window.close();
+            alert('window close has been invoked and title of window is: '+window.document.title);
+      
+      
+            }
+        </script>        
+           
+    </apex:form>
+</apex:page>

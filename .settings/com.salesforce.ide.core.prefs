@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+endpointApiVersion=38.0
+endpointEnvironment=Production/Developer Edition
+endpointServer=login.salesforce.com
+httpsProtocol=true
+ideVersion=38.0
+keependpoint=false
+metadataFormatVersion=38.0
+namespacePrefix=DevOrg123
+packageName=unpackaged
+preferToolingDeployment=true
+projectIdentifier=IDE-7315792128278837366
+readTimeout=430
+sessionId=
+username=manoj@innovexsoft.com

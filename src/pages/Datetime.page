@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:form >
+           
+        <input type="date"  />
+
+
+ 
+        </apex:form>
+</apex:page>

@@ -1,0 +1,54 @@
+<apex:page standardController="Account" id="page">
+ <apex:form id="form">
+  
+   <style type="text/css">
+   .displayblock {
+    display: block;
+    }
+    .displaynone {
+     display: none;
+   }
+   </style>
+   <script>
+   function myHide(){
+    var myButtonClasses = document.getElementById("page:form:op").className;
+    console.log('***'+myButtonClasses);
+    if(myButtonClasses=='displayblock')
+     document.getElementById("page:form:op").className = 'displaynone';
+    else
+     document.getElementById("page:form:op").className = 'displayblock';
+   }
+      </script>
+
+ <apex:outputPanel id="op" styleClass="displaynone">
+  <apex:pageBlock id="pb" >
+   <apex:pageBlockSection id="pbs" title="Account Detail"  >
+     <apex:inputText value="{!Account.name}"/>
+     <apex:inputText value="{!Account.Industry}" />
+     <apex:inputText value="{!Account.Type}" />
+     <apex:inputText value="{!Account.Fax}" />
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+ </apex:outputPanel>
+     <apex:pageBlock >
+   <apex:pageBlockSection title="Account detail"  >
+     <apex:inputText value="{!Account.name}" />
+     <apex:inputText value="{!Account.Industry}" />
+     <apex:inputText value="{!Account.Type}" />
+     <apex:inputText value="{!Account.Fax}" />
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+     <apex:pageBlock >
+   <apex:pageBlockSection title="Account detail"  >
+     <apex:inputText value="{!Account.name}" />
+     <apex:inputText value="{!Account.Industry}" />
+     <apex:inputText value="{!Account.Type}" />
+     <apex:inputText value="{!Account.Fax}" />
+   </apex:pageBlockSection>
+         
+  </apex:pageBlock>
+
+ 
+<apex:commandButton value="Save" reRender="null" onclick="myHide();"/>
+ </apex:form>
+</apex:page>

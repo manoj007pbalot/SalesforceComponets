@@ -1,0 +1,15 @@
+<apex:page standardController="Position__c" showHeader="false" sidebar="false">
+    <apex:sectionHeader title="New Account Edit Page" />
+    <apex:form >
+        <apex:pageBlock title="Create a New Account" >
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account Information">
+                <apex:inputField value="{!Position__c.Min_Salary__c}"/>
+                <apex:inputField value="{!Position__c.Name}"/>
+               <apex:outputText value="{!Position__c.Commission__c}" style="font color:red"/>
+            </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

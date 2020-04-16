@@ -1,0 +1,23 @@
+<apex:page id="page1">
+    <apex:form id="f1" >
+        FirstValue:<apex:inputText id="value1" /><br/><br/>  
+        SecondValue:<apex:inputText id="value2"/><br/><br/>
+        <apex:commandButton value="Click" style="background:yellow;color:black;width:105px; height:22px;" onclick="sum(); return false"/><br/><br/>
+        SumValue:<apex:inputText id="answer"  />
+        <script >
+           function sum(){
+               //page1:f1:value1-firstValue
+               //page1:f1:value2
+               //page1:f1:answer
+               
+               var first=document.getElementById('page1:f1:value1').value;
+               var second=document.getElementById('page1:f1:value2').value;
+               // var SumValue= parsInt(document.getElementById('page1:f1:answer').value=firstValue + secondValue);
+               
+              var total=document.getElementById('page1:f1:answer');
+              total.value=parseInt(first) + parseInt(second);
+           }
+        
+          </script>
+       </apex:form>
+</apex:page>

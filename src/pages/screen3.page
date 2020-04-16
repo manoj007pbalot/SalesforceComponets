@@ -1,0 +1,10 @@
+<apex:page controller="Screen3" >
+ <apex:form >
+ <apex:pageBlock >
+ <apex:pageblockSection >
+     <apex:outputField value="{!account.name}" style="font-weight:bold;"/>
+     <apex:outputField value="{!account.phone}" style="font-weight:bold;"/>
+ </apex:pageblockSection>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

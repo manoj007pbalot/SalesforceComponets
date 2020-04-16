@@ -1,0 +1,12 @@
+<apex:page >
+<apex:form >
+  
+  <h1>Please Fill The below detail</h1><br/><br/>
+  Enter Name:<apex:inputText id="name" /><br/><br/>
+  Enter Age:<apex:inputText id="age"/><br/><br/>
+  Set Username:<apex:inputtext /><br/><br/>
+  Enter Password:<apex:inputSecret /><br/><br/>
+  
+  <apex:commandButton value="save"/><br/><br/>
+</apex:form>
+</apex:page>

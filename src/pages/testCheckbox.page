@@ -1,0 +1,28 @@
+<apex:page sidebar="false" controller="CheckBoxApexClass">
+    <apex:form >
+        <script>
+            function DisableButton(ifChecked,id1){
+                 document.getElementById(id1).disable=ifChecked;
+                }
+        </script>
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!ProcessSelected}" value="show selected account" reRender="block2"   />
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+           <apex:pageBlockTable value="{!wrapaccountlist}" var="waccl" >
+               <apex:column >
+                   <apex:facet name="header">
+                       <apex:inputCheckbox id="page1" onchange="return DisableButton(this.checked, '{!$Component.page1}'); "/>
+                   </apex:facet>
+                   <apex:inputCheckbox />
+               </apex:column>
+               <apex:column value="{!waccl.accn.name}" />
+               <apex:column value="{!waccl.accn.phone}" />
+               <apex:column value="{!waccl.accn.billingcity}" />
+                   </apex:pageBlockTable>
+               
+               </apex:pageBlockSection>
+            </apex:pageBlock>
+   </apex:form>
+    </apex:page>

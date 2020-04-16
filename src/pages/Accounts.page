@@ -1,0 +1,16 @@
+<apex:page StandardController="Account">
+<apex:form >
+<apex:pageBlock title="Display Data">
+<b>Name:</b> {!Account.Name}<br/>
+<b>Type:</b> {!Account.Type}<br/>
+<b>Industry:</b> {!Account.Industry}<br/>
+<b>Phone:</b> {!Account.Phone}<br/>
+<b>Fax:</b> {!Account.Fax}<br/>
+<apex:pageBlockButtons location="bottom">
+<apex:commandButton value="save" action="!save"/>
+<apex:commandButton value="Delete" action="!delete"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+</apex:form>  
+</apex:page>

@@ -1,0 +1,58 @@
+<apex:page controller="cls_printpage1" sidebar="false" showHeader="false" lightningStylesheets="true">
+ <apex:form >
+ <apex:pageBlock title="My Page Block">
+     
+<table class="list" border="0" cellpadding="0" cellspacing="0">
+   
+  
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" />
+          </th>
+    
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" />
+          </th>
+    
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" />
+          </th>
+    
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" />
+          </th>
+    
+    <th class="headerRow" >
+        
+           <apex:inputCheckbox ondblclick="RowWrapper" />
+          </th>
+       
+    <apex:repeat value="{!rowWrappers}" var="row">
+     
+        
+       <tr>
+         <apex:repeat value="{!row.labels}" var="label">          
+           <td>
+            <b>{!label}</b>
+           </td>
+         </apex:repeat>
+         
+         <apex:repeat value="{!row.values}" var="value1">
+             
+
+         
+           <td>
+             {!value1}
+           </td>
+         </apex:repeat>
+       </tr>
+    </apex:repeat>
+   
+    </table>
+      
+    </apex:pageBlock>
+      </apex:form>
+</apex:page>

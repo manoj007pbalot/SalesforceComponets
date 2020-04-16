@@ -1,0 +1,10 @@
+<apex:page standardController="Account" >
+    <apex:form >
+        
+                <apex:commandButton value="Previous" onclick="window.close();" />
+                <script>      
+              window.close();
+           </script>  
+           
+    </apex:form>
+</apex:page>
