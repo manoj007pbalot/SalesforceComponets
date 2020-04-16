@@ -1,7 +1,7 @@
 global class CustomerDataTransferJob implements Database.Batchable<sObject> {
     private static Date startdate; 
     public String query;
-    
+    System.debug('Hello');
     global Database.QueryLocator start(Database.BatchableContext BC) {
         // collect the batches of records or objects to be passed to execute         
         List<Customer_Data_Transfer__c> oldCdt=[select id from Customer_Data_Transfer__c limit 10000];
